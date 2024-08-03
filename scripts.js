@@ -1,34 +1,108 @@
-// scripts.js
-document.addEventListener('DOMContentLoaded', () => {
-    const vehicleTypeSelect = document.getElementById('vehicleType');
-    const vehicleNameSelect = document.getElementById('vehicleName');
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background: url('background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+}
 
-    const vehicleOptions = {
-        '7-seats': ['Inova 2022', 'Xpander', 'Grand Livina'],
-        '16-seats': ['Elf', 'Isuzu NKR'],
-        '18-seats': ['Hino RK8', 'Toyota Coaster'],
-        '25-seats': ['Hino RM', 'Mercedes-Benz Sprinter'],
-        '45-seats': ['Mercedes-Benz O500', 'Volvo B7R']
-    };
+.container {
+    background-color: #fff; /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    vehicleTypeSelect.addEventListener('change', () => {
-        const selectedType = vehicleTypeSelect.value;
-        const names = vehicleOptions[selectedType] || [];
-        vehicleNameSelect.innerHTML = '<option value="">Sélectionnez un véhicule</option>';
+.booking-type {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
 
-        names.forEach(name => {
-            const option = document.createElement('option');
-            option.value = name;
-            option.textContent = name;
-            vehicleNameSelect.appendChild(option);
-        });
+.booking-type input {
+    display: none;
+}
 
-        vehicleNameSelect.disabled = names.length === 0;
-    });
+.booking-type label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    // Initialize Flatpickr
-    flatpickr("#datetime", {
-        enableTime: true,
-        dateFormat: "Y-m-d H:i",
-    }); 
-});
+.booking-type input:checked + label {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+form div {
+    margin-bottom: 5px;
+}
+
+label {
+    display: block;
+    /* margin-bottom: 5px;
+    margin-top: 15px;
+    font-weight: bold; */
+}
+
+input, select, button {
+    width: 100%;
+    padding: 10px 0px 16px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+button {
+    height: 44px;
+    width: 190px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    padding: 10px 26px;
+    background-color: rgb(72, 163, 0);
+    border-radius: 8px;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+}
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current, 
+    .xdsoft_datetimepicker .xdsoft_calendar td:hover, 
+    .xdsoft_datetimepicker .xdsoft_time_box .xdsoft_time_variant .xdsoft_current, 
+    .xdsoft_datetimepicker .xdsoft_time_box .xdsoft_time_variant:hover, 
+    .xdsoft_datetimepicker .xdsoft_time_box .xdsoft_time_variant div:hover, 
+    .xdsoft_datetimepicker .xdsoft_time_box .xdsoft_time_variant div.xdsoft_current {
+      background: rgb(72, 163, 0) !important;
+      color: white !important;
+    }
+	
+    .xdsoft_datetimepicker .xdsoft_time_box .xdsoft_time_variant div:hover, 
+    .xdsoft_datetimepicker .xdsoft_time_box .xdsoft_time_variant div.xdsoft_current {
+      background: rgb(72, 163, 0) !important;
+      color: white !important;
+    }
+    .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_date:hover, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box>div.xdsoft_time_variant>div:hover {
+        background: rgb(72, 163, 0) !important;
+    }

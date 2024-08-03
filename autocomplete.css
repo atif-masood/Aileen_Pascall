@@ -1,0 +1,206 @@
+.f-autocomplete-container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .f-input-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .f-input-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid #333;
+    padding: 10px;
+    padding-top:20px;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .f-input-field input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  .f-input-field input:placeholder-shown ~ .f-floating-label {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #999;
+  }
+  
+  .f-input-field input:not(:placeholder-shown) ~ .f-floating-label,
+  .f-input-field input:focus ~ .f-floating-label {
+    top: 6px;
+    left: 16px;
+    font-size: 12px;
+    color: #333;
+  }
+  
+  .f-input-field .f-floating-label {
+    position: absolute;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .f-input-field .f-icon {
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .f-input-field .f-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .f-autocomplete-options {
+    border: 2px solid rgb(72, 163, 0);
+    border-radius: 0 0 4px 4px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .f-option {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+  }
+  
+  .f-option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .f-option-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+  }
+  
+  .f-option-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0 0;
+  }
+  
+  .f-hidden {
+    display: none;
+  }
+  .f-two-autocomplete-container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .f-two-input-wrapper {
+    position: relative;
+    margin-bottom: 10px;
+  }
+  
+  .f-two-input-field {
+    display: flex;
+    align-items: center;
+    border: 1px solid #333;
+    padding: 10px;
+    padding-top:20px;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .f-two-input-field input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  .f-two-input-field input:placeholder-shown ~ .f-two-floating-label {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #999;
+  }
+  
+  .f-two-input-field input:not(:placeholder-shown) ~ .f-two-floating-label,
+  .f-two-input-field input:focus ~ .f-two-floating-label {
+    top: 6px;
+    left: 16px;
+    font-size: 12px;
+    color: #333;
+  }
+  
+  .f-two-input-field .f-two-floating-label {
+    position: absolute;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .f-two-input-field .f-two-icon {
+    margin-left: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+  
+  .f-two-input-field .f-two-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .f-two-autocomplete-options {
+    border: 2px solid rgb(72, 163, 0);
+    border-radius: 0 0 4px 4px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .f-two-option {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+  }
+  
+  .f-two-option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .f-two-option-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+  }
+  
+  .f-two-option-subtitle {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0 0;
+  }
+  
+  .f-two-hidden {
+    display: none;
+  }
+  
+  

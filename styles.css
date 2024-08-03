@@ -50,9 +50,9 @@ form div {
 
 label {
     display: block;
-    margin-bottom: 5px;
+    /* margin-bottom: 5px;
     margin-top: 15px;
-    font-weight: bold;
+    font-weight: bold; */
 }
 
 input, select, button {
@@ -63,13 +63,19 @@ input, select, button {
 }
 
 button {
-    background-color: #4CAF50;
-    color: #fff;
+    height: 44px;
+    width: 190px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    padding: 10px 26px;
+    background-color: rgb(72, 163, 0);
+    border-radius: 8px;
     border: none;
+    color: rgb(255, 255, 255);
     cursor: pointer;
-    width: 165px;
-    height: 56px;
-    margin: 0px 0px 0px 627px;
 }
 
 .grid-container {
@@ -82,3 +88,21 @@ button {
     display: flex;
     flex-direction: column;
 }
+.xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_current, 
+    .xdsoft_datetimepicker .xdsoft_calendar td:hover, 
+    .xdsoft_datetimepicker .xdsoft_time_box .xdsoft_time_variant .xdsoft_current, 
+    .xdsoft_datetimepicker .xdsoft_time_box .xdsoft_time_variant:hover, 
+    .xdsoft_datetimepicker .xdsoft_time_box .xdsoft_time_variant div:hover, 
+    .xdsoft_datetimepicker .xdsoft_time_box .xdsoft_time_variant div.xdsoft_current {
+      background: rgb(72, 163, 0) !important;
+      color: white !important;
+    }
+	
+    .xdsoft_datetimepicker .xdsoft_time_box .xdsoft_time_variant div:hover, 
+    .xdsoft_datetimepicker .xdsoft_time_box .xdsoft_time_variant div.xdsoft_current {
+      background: rgb(72, 163, 0) !important;
+      color: white !important;
+    }
+    .xdsoft_datetimepicker .xdsoft_calendar td.xdsoft_date:hover, .xdsoft_datetimepicker .xdsoft_timepicker .xdsoft_time_box>div.xdsoft_time_variant>div:hover {
+        background: rgb(72, 163, 0) !important;
+    }

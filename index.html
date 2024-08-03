@@ -4,22 +4,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulaire de réservation de voiture</title>
+  <title>Mẫu đặt xe</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="autocomplete.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
 </head>
-
 <body>
   <div class="container">
-    <h1>Réserver une voiture</h1>
+    <h1>Đặt xe</h1>
     <form id="carBookingForm">
       <div class="f-autocomplete-container">
         <div class="f-input-wrapper">
           <div class="f-input-field">
             <input id="f-autocomplete-input" type="text" placeholder=" " value="" readonly>
-            <label for="autocomplete-input" class="f-floating-label">Type de véhicule:</label>
+            <label for="autocomplete-input" class="f-floating-label">Loại phương tiện:</label>
             <div class="f-icon">
               <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true">
                 <path
@@ -51,7 +50,7 @@
         <div class="f-two-input-wrapper">
           <div class="f-two-input-field">
             <input id="f-two-autocomplete-input" type="text" placeholder=" " value="" readonly>
-            <label for="autocomplete-input" class="f-two-floating-label">Nom du véhicule:</label>
+            <label for="autocomplete-input" class="f-two-floating-label">Tên xe:</label>
             <div class="f-two-icon">
               <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true">
                 <path
@@ -65,17 +64,38 @@
           <div class="f-two-option" data-vehicle="7-places">
             <p class="f-two-option-title">Mercedes</p>
           </div>
+          <div class="f-two-option" data-vehicle="7-places">
+            <p class="f-two-option-title">Inova 2022</p>
+          </div>
+          <div class="f-two-option" data-vehicle="7-places">
+            <p class="f-two-option-title">Xpander</p>
+          </div>
           <div class="f-two-option" data-vehicle="16-places">
             <p class="f-two-option-title">BMW</p>
+          </div>
+          <div class="f-two-option" data-vehicle="16-places">
+            <p class="f-two-option-title">Isuzu NKR</p>
           </div>
           <div class="f-two-option" data-vehicle="18-places">
             <p class="f-two-option-title">Audi</p>
           </div>
+          <div class="f-two-option" data-vehicle="18-places">
+            <p class="f-two-option-title">Hino RK8</p>
+          </div>
           <div class="f-two-option" data-vehicle="25-places">
             <p class="f-two-option-title">Toyota</p>
           </div>
+          <div class="f-two-option" data-vehicle="25-places">
+            <p class="f-two-option-title">Elf</p>
+          </div>
           <div class="f-two-option" data-vehicle="45-places">
             <p class="f-two-option-title">Volvo</p>
+          </div>
+          <div class="f-two-option" data-vehicle="45-places">
+            <p class="f-two-option-title">Mercedes-Benz O500</p>
+          </div>
+          <div class="f-two-option" data-vehicle="45-places">
+            <p class="f-two-option-title">Volvo B7R</p>
           </div>
         </div>
       </div>
@@ -85,7 +105,7 @@
             <div class="f-two-input-wrapper">
               <div class="f-two-input-field">
                 <input id="addressStart" name="addressStart" type="text" placeholder=" " value="">
-                <label for="addressStart" class="f-two-floating-label">Adresse de départ:</label>
+                <label for="addressStart" class="f-two-floating-label">Địa chỉ khởi hành:</label>
               </div>
             </div>
           </div>
@@ -95,7 +115,7 @@
             <div class="f-two-input-wrapper">
               <div class="f-two-input-field">
                 <input id="addressEnd" name="addressEnd" type="text" placeholder=" " value="">
-                <label for="addressEnd" class="f-two-floating-label">Adresse d'arrivée:</label>
+                <label for="addressEnd" class="f-two-floating-label">Địa chỉ đến:</label>
               </div>
             </div>
           </div>
@@ -105,7 +125,7 @@
         <div class="f-two-input-wrapper">
           <div class="f-two-input-field">
             <input type="text" id="datetimepicker" name="datetimepicker" required placeholder=" " value="">
-            <label for="datetimepicker" class="f-two-floating-label">Date et Heure:</label>
+            <label for="datetimepicker" class="f-two-floating-label">Ngày và giờ:</label>
           </div>
         </div>
       </div>
@@ -115,7 +135,7 @@
             <div class="f-two-input-wrapper">
               <div class="f-two-input-field">
                 <input id="name" name="name" type="text" placeholder=" " value="" required>
-                <label for="name" class="f-two-floating-label">Nom:</label>
+                <label for="name" class="f-two-floating-label">Nôm:</label>
               </div>
             </div>
           </div>
@@ -124,15 +144,15 @@
           <div class="f-two-autocomplete-container">
             <div class="f-two-input-wrapper">
               <div class="f-two-input-field">
-                <input id="phone" name="phone" type="tel" placeholder=" " value="" required>
-                <label for="phone" class="f-two-floating-label">Téléphone:</label>
+                <input id="phone" name="phone" type="tel" placeholder="" value="" required>
+                <label for="phone" class="f-two-floating-label">Điện thoại:</label>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div style="display: flex; justify-content: end;">
-        <button type="submit" style="margin-top: 25px;">Réserver une voiture</button>
+        <button type="submit" style="margin-top: 25px;">Đặt xe</button>
       </div>
     </form>
   </div>

@@ -1,143 +1,187 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire de réservation de voiture</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="autocomplete.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire de réservation de voiture</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="autocomplete.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>Réserver une voiture</h1>
-        <form id="carBookingForm">
-            <div class="f-autocomplete-container">
-                <div class="f-input-wrapper">
-                  <div class="f-input-field">
-                    <input id="f-autocomplete-input" type="text" placeholder=" " value="" readonly>
-                    <label for="autocomplete-input" class="f-floating-label">Type de véhicule:</label>
-                    <div class="f-icon">
-                      <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M16 17.01V11c0-.55-.45-1-1-1s-1 .45-1 1v6.01h-1.79c-.45 0-.67.54-.35.85l2.79 2.78c.2.19.51.19.71 0l2.79-2.78c.32-.31.09-.85-.35-.85H16zM8.65 3.35L5.86 6.14c-.32.31-.1.85.35.85H8V13c0 .55.45 1 1 1s1-.45 1-1V6.99h1.79c.45 0 .67-.54.35-.85L9.35 3.35c-.19-.19-.51-.19-.7 0z"></path>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="f-autocomplete-options f-hidden">
-                  <div class="f-option">
-                    <p class="f-option-title">7 places</p>
-                  </div>
-                  <div class="f-option">
-                    <p class="f-option-title">16 places</p>
-                  </div>
-                  <div class="f-option">
-                    <p class="f-option-title">18 places</p>
-                  </div>
-                  <div class="f-option">
-                    <p class="f-option-title">25 places</p>
-                  </div>
-                  <div class="f-option">
-                    <p class="f-option-title">45 places</p>
-                  </div>
-                </div>
+  <div class="container">
+    <h1>Réserver une voiture</h1>
+    <form id="carBookingForm">
+      <div class="f-autocomplete-container">
+        <div class="f-input-wrapper">
+          <div class="f-input-field">
+            <input id="f-autocomplete-input" type="text" placeholder=" " value="" readonly>
+            <label for="autocomplete-input" class="f-floating-label">Type de véhicule:</label>
+            <div class="f-icon">
+              <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M16 17.01V11c0-.55-.45-1-1-1s-1 .45-1 1v6.01h-1.79c-.45 0-.67.54-.35.85l2.79 2.78c.2.19.51.19.71 0l2.79-2.78c.32-.31.09-.85-.35-.85H16zM8.65 3.35L5.86 6.14c-.32.31-.1.85.35.85H8V13c0 .55.45 1 1 1s1-.45 1-1V6.99h1.79c.45 0 .67-.54.35-.85L9.35 3.35c-.19-.19-.51-.19-.7 0z">
+                </path>
+              </svg>
             </div>
-            <div class="f-two-autocomplete-container">
-                <div class="f-two-input-wrapper">
-                  <div class="f-two-input-field">
-                    <input id="f-two-autocomplete-input" type="text" placeholder=" " value="" readonly>
-                    <label for="autocomplete-input" class="f-two-floating-label">Nom du véhicule:</label>
-                    <div class="f-two-icon">
-                      <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M16 17.01V11c0-.55-.45-1-1-1s-1 .45-1 1v6.01h-1.79c-.45 0-.67.54-.35.85l2.79 2.78c.2.19.51.19.71 0l2.79-2.78c.32-.31.09-.85-.35-.85H16zM8.65 3.35L5.86 6.14c-.32.31-.1.85.35.85H8V13c0 .55.45 1 1 1s1-.45 1-1V6.99h1.79c.45 0 .67-.54.35-.85L9.35 3.35c-.19-.19-.51-.19-.7 0z"></path>
-                      </svg>
-                    </div>
-                  </div>
-                </div>
-                <div class="f-two-autocomplete-options f-two-hidden">
-                  <div class="f-two-option">
-                    <p class="f-two-option-title">Mercedes</p>
-                  </div>
-                </div>
+          </div>
+        </div>
+        <div class="f-autocomplete-options f-hidden">
+          <div class="f-option" data-type="7-places">
+            <p class="f-option-title">7 places</p>
+          </div>
+          <div class="f-option" data-type="16-places">
+            <p class="f-option-title">16 places</p>
+          </div>
+          <div class="f-option" data-type="18-places">
+            <p class="f-option-title">18 places</p>
+          </div>
+          <div class="f-option" data-type="25-places">
+            <p class="f-option-title">25 places</p>
+          </div>
+          <div class="f-option" data-type="45-places">
+            <p class="f-option-title">45 places</p>
+          </div>
+        </div>
+      </div>
+      <div class="f-two-autocomplete-container" id="vehicleNameContainer">
+        <div class="f-two-input-wrapper">
+          <div class="f-two-input-field">
+            <input id="f-two-autocomplete-input" type="text" placeholder=" " value="" readonly>
+            <label for="autocomplete-input" class="f-two-floating-label">Nom du véhicule:</label>
+            <div class="f-two-icon">
+              <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M16 17.01V11c0-.55-.45-1-1-1s-1 .45-1 1v6.01h-1.79c-.45 0-.67.54-.35.85l2.79 2.78c.2.19.51.19.71 0l2.79-2.78c.32-.31.09-.85-.35-.85H16zM8.65 3.35L5.86 6.14c-.32.31-.1.85.35.85H8V13c0 .55.45 1 1 1s1-.45 1-1V6.99h1.79c.45 0 .67-.54.35-.85L9.35 3.35c-.19-.19-.51-.19-.7 0z">
+                </path>
+              </svg>
             </div>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <div class="f-two-autocomplete-container">
-                        <div class="f-two-input-wrapper">
-                          <div class="f-two-input-field">
-                            <input id="addressStart" name="addressStart" type="text" placeholder=" " value="">
-                            <label for="addressStart" class="f-two-floating-label">Adresse de départ:</label>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="f-two-autocomplete-container">
-                        <div class="f-two-input-wrapper">
-                          <div class="f-two-input-field">
-                            <input id="addressEnd" name="addressEnd" type="text" placeholder=" " value="">
-                            <label for="addressEnd" class="f-two-floating-label">Adresse d'arrivée:</label>
-                          </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div class="f-two-autocomplete-options f-two-hidden">
+          <div class="f-two-option" data-vehicle="7-places">
+            <p class="f-two-option-title">Mercedes</p>
+          </div>
+          <div class="f-two-option" data-vehicle="16-places">
+            <p class="f-two-option-title">BMW</p>
+          </div>
+          <div class="f-two-option" data-vehicle="18-places">
+            <p class="f-two-option-title">Audi</p>
+          </div>
+          <div class="f-two-option" data-vehicle="25-places">
+            <p class="f-two-option-title">Toyota</p>
+          </div>
+          <div class="f-two-option" data-vehicle="45-places">
+            <p class="f-two-option-title">Volvo</p>
+          </div>
+        </div>
+      </div>
+      <div class="grid-container">
+        <div class="grid-item">
+          <div class="f-two-autocomplete-container">
+            <div class="f-two-input-wrapper">
+              <div class="f-two-input-field">
+                <input id="addressStart" name="addressStart" type="text" placeholder=" " value="">
+                <label for="addressStart" class="f-two-floating-label">Adresse de départ:</label>
+              </div>
             </div>
-            <div class="f-two-autocomplete-container">
-                <div class="f-two-input-wrapper">
-                  <div class="f-two-input-field">
-                    <input type="text" id="datetimepicker" name="datetimepicker" required placeholder=" " value="">
-                    <label for="datetimepicker" class="f-two-floating-label">Date et Heure:</label>
-                  </div>
-                </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="f-two-autocomplete-container">
+            <div class="f-two-input-wrapper">
+              <div class="f-two-input-field">
+                <input id="addressEnd" name="addressEnd" type="text" placeholder=" " value="">
+                <label for="addressEnd" class="f-two-floating-label">Adresse d'arrivée:</label>
+              </div>
             </div>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <div class="f-two-autocomplete-container">
-                        <div class="f-two-input-wrapper">
-                          <div class="f-two-input-field">
-                            <input id="name" name="name" type="text" placeholder=" " value="" required>
-                            <label for="name" class="f-two-floating-label">Nom:</label>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid-item">
-                    <div class="f-two-autocomplete-container">
-                        <div class="f-two-input-wrapper">
-                          <div class="f-two-input-field">
-                            <input id="phone" name="phone" type="tel" placeholder=" " value="" required>
-                            <label for="phone" class="f-two-floating-label">Téléphone:</label>
-                          </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+      </div>
+      <div class="f-two-autocomplete-container">
+        <div class="f-two-input-wrapper">
+          <div class="f-two-input-field">
+            <input type="text" id="datetimepicker" name="datetimepicker" required placeholder=" " value="">
+            <label for="datetimepicker" class="f-two-floating-label">Date et Heure:</label>
+          </div>
+        </div>
+      </div>
+      <div class="grid-container">
+        <div class="grid-item">
+          <div class="f-two-autocomplete-container">
+            <div class="f-two-input-wrapper">
+              <div class="f-two-input-field">
+                <input id="name" name="name" type="text" placeholder=" " value="" required>
+                <label for="name" class="f-two-floating-label">Nom:</label>
+              </div>
             </div>
-            <div style="display: flex; justify-content: end;">
-                <button type="submit" style="margin-top: 25px;">Réserver une voiture</button>
+          </div>
+        </div>
+        <div class="grid-item">
+          <div class="f-two-autocomplete-container">
+            <div class="f-two-input-wrapper">
+              <div class="f-two-input-field">
+                <input id="phone" name="phone" type="tel" placeholder=" " value="" required>
+                <label for="phone" class="f-two-floating-label">Téléphone:</label>
+              </div>
             </div>
-        </form>
-    </div>
-    <script src="scripts.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.fr.min.js"></script>
-    <script src="autocomplete.js"></script>
-    <script>
-        $(document).ready(function(){
-          $('#datetimepicker').datetimepicker({
-            format: 'Y-m-d H:i',
-            step: 30,
-            datepicker: true,
-            timepicker: true,
-            defaultTime: '00:00',
-            inline: false,
-            sideBySide: true,
-            lang: 'fr',
-            onShow: function(ct, $input) {
-              $('.xdsoft_timepicker').css('float', 'right');
-            }
-          });
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; justify-content: end;">
+        <button type="submit" style="margin-top: 25px;">Réserver une voiture</button>
+      </div>
+    </form>
+  </div>
+  <script src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.fr.min.js"></script>
+  <script src="autocomplete.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#datetimepicker').datetimepicker({
+        format: 'Y-m-d H:i',
+        step: 30,
+        datepicker: true,
+        timepicker: true,
+        defaultTime: '00:00',
+        inline: false,
+        sideBySide: true,
+        lang: 'fr',
+        onShow: function (ct, $input) {
+          $('.xdsoft_timepicker').css('float', 'right');
+        }
+      });
+
+      // Handle vehicle type selection
+      $('.f-option').click(function () {
+        const selectedType = $(this).data('type');
+        $('#f-autocomplete-input').val($(this).text().trim());
+
+        // Show vehicle name options based on selected type
+        $('#vehicleNameContainer').removeClass('f-hidden');
+        $('.f-two-option').each(function () {
+          if ($(this).data('vehicle') === selectedType) {
+            $(this).removeClass('f-two-hidden');
+          } else {
+            $(this).addClass('f-two-hidden');
+          }
         });
-      </script>
+      });
+
+      // Handle vehicle name selection
+      $('.f-two-option').click(function () {
+        $('#f-two-autocomplete-input').val($(this).text().trim());
+      });
+    });
+
+  </script>
 </body>
+
 </html>

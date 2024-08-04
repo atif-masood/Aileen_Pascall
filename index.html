@@ -7,9 +7,11 @@
   <title>Mẫu đặt xe</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="autocomplete.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.min.css">
 </head>
+
 <body>
   <div class="container">
     <h1>Đặt xe</h1>
@@ -126,6 +128,9 @@
           <div class="f-two-input-field">
             <input type="text" id="datetimepicker" name="datetimepicker" required placeholder=" " value="">
             <label for="datetimepicker" class="f-two-floating-label">Ngày và giờ:</label>
+            <div class="f-two-icon">
+              <i class="fa-solid fa-calendar-days datepicker-icon"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -165,19 +170,38 @@
   <script src="autocomplete.js"></script>
   <script>
     $(document).ready(function () {
-      $('#datetimepicker').datetimepicker({
-        format: 'Y-m-d H:i',
-        step: 30,
-        datepicker: true,
-        timepicker: true,
-        defaultTime: '00:00',
-        inline: false,
-        sideBySide: true,
-        lang: 'fr',
-        onShow: function (ct, $input) {
-          $('.xdsoft_timepicker').css('float', 'right');
-        }
-      });
+      $.datetimepicker.setLocale('vi');
+
+        $('#datetimepicker').datetimepicker({
+            format: 'Y-m-d H:i',
+            step: 30,
+            datepicker: true,
+            timepicker: true,
+            defaultTime: '00:00',
+            inline: false,
+            sideBySide: true,
+            lang: 'vi',
+            onShow: function (ct, $input) {
+                $('.xdsoft_timepicker').css('float', 'right');
+            },
+            i18n: {
+                vi: {
+                    closeText: "Đóng",
+                    prevText: "Trước",
+                    nextText: "Sau",
+                    currentText: "Hôm nay",
+                    monthNames: ["Tháng một", "Tháng hai", "Tháng ba", "Tháng tư", "Tháng năm", "Tháng sáu", "Tháng bảy", "Tháng tám", "Tháng chín", "Tháng mười", "Tháng mười một", "Tháng mười hai"],
+                    monthNamesShort: ["Một", "Hai", "Ba", "Bốn", "Năm", "Sáu", "Bảy", "Tám", "Chín", "Mười", "Mười một", "Mười hai"],
+                    dayNames: ["Chủ nhật", "Thứ hai", "Thứ ba", "Thứ tư", "Thứ năm", "Thứ sáu", "Thứ bảy"],
+                    dayNamesShort: ["CN", "Hai", "Ba", "Tư", "Năm", "Sáu", "Bảy"],
+                    dayNamesMin: ["CN", "T2", "T3", "T4", "T5", "T6", "T7"],
+                    weekHeader: "Tuần"
+                }
+            }
+        });
+      $(".datepicker-icon").click(function() {
+            $("#datetimepicker").focus();
+        });
 
       // Handle vehicle type selection
       $('.f-option').click(function () {
